@@ -46,6 +46,12 @@ public class Activity_Game extends AppCompatActivity {
         startTimer();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopTimer();
+    }
+
     private void initViews() {
         game_BTN_left.setOnClickListener(v -> {
             if (game_IMG_cars[1].isShown()) {
