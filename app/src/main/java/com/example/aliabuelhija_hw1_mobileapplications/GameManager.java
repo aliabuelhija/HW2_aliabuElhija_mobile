@@ -5,18 +5,23 @@ import java.util.Random;
 
 public class GameManager {
     public static final int MAX_LIVES = 3;
-    public static final int COLUMNS = 3;
+    public static final int COLUMNS = 5;
     public static final int ROWS = 5;
     private int lives = MAX_LIVES;
     public boolean[][] activeBombs;
+    public boolean[][] activeGifts;
+
     public boolean[] lifes;
     private int carIndex;
     boolean isHit;
     boolean finish;
+    boolean gift;
 
     public GameManager() {
-        carIndex=1;
+        carIndex=2;
         activeBombs=new boolean[ROWS][COLUMNS];
+        activeGifts=new boolean[ROWS][COLUMNS];
+
         initLives();
     }
     public void initLives(){
@@ -43,6 +48,9 @@ public class GameManager {
     public boolean isActive(int row,int col) {
         return activeBombs[row][col];
     }
+    public boolean isGiftActive(int row,int col) {
+        return activeGifts[row][col];
+    }
     public void updateGame() {
         for (int i = getROWS()-1; i >=0;i--){
             for (int j = 0; j <getCOLUMNS();j++){
@@ -67,15 +75,41 @@ public class GameManager {
             }
         }
     }
-    public void updateNewBomb(){
-        int col =getRandom();
-        for(int i = 0;i<getCOLUMNS();i++){
-            activeBombs[0][i]= col == i;
+    public void updateGifts() {
+        for (int i = getROWS()-1; i >=0;i--){
+            for (int j = 0; j <getCOLUMNS();j++){
+                if( isGiftActive(i,j) && i == getROWS()-1) {
+                    activeGifts[i][j] = false;
+
+                    if (j == carIndex) {
+                        gift=true;
+
+                    }
+                }
+                else if(i != getROWS()-1){
+                    activeGifts[i+1][j]=activeGifts[i][j];
+
+                }
+            }
         }
+    }
+
+    public void updateNew(){
+        int col =getRandom();
+        for(int i = 0;i<getCOLUMNS();i++)
+            activeBombs[0][i] = col == i;
+        int colForGift = getRandom();
+        while(col == colForGift){
+            colForGift=getRandom();
+        }
+        for(int i = 0;i<getCOLUMNS();i++)
+            activeGifts[0][i] = colForGift == i;
+
     }
     public void update(){
         updateGame();
-        updateNewBomb();
+        updateGifts();
+        updateNew();
     }
 
     public void setHit(boolean hit) {
@@ -92,5 +126,16 @@ public class GameManager {
 
     public void setCarIndex(int carIndex) {
         this.carIndex = carIndex;
+    }
+
+    public int getCarIndex() {
+        return carIndex;
+    }
+    public void setGiftHit(boolean hit) {
+        gift = hit;
+    }
+
+    public boolean isGift() {
+        return gift;
     }
 }

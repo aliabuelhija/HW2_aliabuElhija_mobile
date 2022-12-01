@@ -7,12 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Game"
     >
+
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/street_IMG_background"
+        android:id="@+id/game_IMG_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:background="@color/white" />
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="140dp"
@@ -89,228 +91,633 @@
         </RelativeLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:weightSum="6">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="75dp"
             android:layout_weight="0.5"
             android:orientation="horizontal"
-            android:weightSum="3">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible"
-
-                />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible"
-
-                />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_centerInParent="true"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb8"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible"
-
-                />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb9"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_centerInParent="true"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb10"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb11"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible"
-
-                />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb12"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_centerInParent="true"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb13"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb14"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible"
-
-                />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/game_IMG_bomb15"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_bomb"
-                android:visibility="invisible" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_centerInParent="true"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:visibility="visible"
-            >
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="0dp"
+            android:weightSum="5">
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_car"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_bomb25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_bomb"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_gift25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="5">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_car1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:visibility="invisible"
-                android:id="@+id/game_IMG_carLeft"
-                >
+                app:srcCompat="@drawable/ic_car">
 
             </com.google.android.material.imageview.ShapeableImageView>
+
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_car2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_car"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_car">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_car3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:visibility="visible"
-                android:id="@+id/game_IMG_carCenter"
-                >
+                app:srcCompat="@drawable/ic_car" />
 
-            </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_car4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_car"
                 android:layout_weight="1"
                 android:visibility="invisible"
-                android:id="@+id/game_IMG_carRight"
-                />
+                app:srcCompat="@drawable/ic_car" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_car5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_car" />
 
 
         </LinearLayout>
