@@ -25,7 +25,7 @@ public class Activity_Game extends AppCompatActivity {
     private ImageView[][] game_IMG_bombs;
     private ShapeableImageView[] game_IMG_hearts;
     private AppCompatImageView street_IMG_background;
-    final int DELAY = 500;
+    final int DELAY = 1000;
     final Handler handler = new Handler();
     private GameManager gameManager;
 
@@ -50,6 +50,12 @@ public class Activity_Game extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         stopTimer();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        startTimer();
     }
 
     private void initViews() {
